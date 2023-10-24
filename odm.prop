@@ -1,0 +1,5 @@
+ro.product.odm.cert=
+ro.product.odm.marketname=
+ro.vendor.nfc.wallet_fusion=1
+ro.vendor.qti.va_odm.support=1
+sys.haptic.device_type=agm
