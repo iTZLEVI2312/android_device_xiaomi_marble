@@ -1,0 +1,55 @@
+# Charger
+ro.charger.enable_suspend=1
+
+# CNE 
+persist.vendor.cne.feature=1
+
+# Camera
+persist.vendor.camera.aon.cameraId=8
+persist.vendor.camera.aon8475.cameraId=9
+
+# Disable ftrace by default
+persist.debug.ftrace_events_disable=Yes
+
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
+# Initialize QCA1530 detection
+sys.qca1530=detect
+
+# NFC DT
+ro.nfc.port=I2C
+
+# Qcom
+ro.vendor.qti.va_aosp.support=1
+
+# RIL
+DEVICE_PROVISIONED=1
+telephony.lteOnCdmaDevice=1
+ro.telephony.default_network=33,33
+ro.vendor.use_data_netmgrd=true
+persist.vendor.data.mode=concurrent
+ril.subscription.types=NV,RUIM
+rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
+
+# System Server 
+arm64.memtag.process.system_server=off
+
+# SSR 
+persist.vendor.ssr.enable_ramdumps=1
+
+# Sensors
+persist.vendor.sensors.enable.mag_filter=true
+
+# Wifi 
+config.disable_rtt=true
+
+# WiFi display
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0
+
+# WLAN
+ro.hardware.wlan.chip=qca6490
+ro.hardware.wlan.dbs=2
+ro.hardware.wlan.mimo=1
+ro.hardware.wlan.vendor=qcom
