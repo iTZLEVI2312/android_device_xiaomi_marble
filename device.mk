@@ -53,7 +53,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
-    SettingsProviderResMarble
+    SettingsProviderResMarble \
+    WifiResMarble
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
