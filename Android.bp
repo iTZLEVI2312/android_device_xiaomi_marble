@@ -5,7 +5,9 @@
 //
 
 soong_namespace {
-        imports: [
+    imports: [
+        "hardware/qcom-caf/bootctrl",
         "hardware/xiaomi",
+        "vendor/qcom/opensource/commonsys-intf/display",
     ],
 }

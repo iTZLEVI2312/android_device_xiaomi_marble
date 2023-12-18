@@ -1,5 +1,5 @@
 <!--
-     Copyright (C) 2023 Paranoid Android
+     Copyright (C) 2023 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <compatibility-matrix version="1.0" type="framework">
@@ -9,6 +9,15 @@
         <interface>
             <name>IComponentStore</name>
             <instance>dolby</instance>
+            <instance>ozoaudio</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.vibrator</name>
+        <version>1-2</version>
+        <interface>
+            <name>IVibrator</name>
+            <instance>vibratorfeature</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -16,6 +25,14 @@
         <version>2.0</version>
         <interface>
             <name>IDms</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.sla.service</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISlaService</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -29,7 +46,6 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.xiaomi.hardware.campostproc</name>
-        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IMiPostProcService</name>
@@ -38,7 +54,6 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.xiaomi.hardware.displayfeature</name>
-        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IDisplayFeature</name>
@@ -46,10 +61,42 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.fx.tunnel</name>
+        <version>1.0</version>
+        <interface>
+            <name>IMiFxTunnel</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.mfidoca</name>
+        <version>1.0</version>
+        <interface>
+            <name>IFidoService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.micharge</name>
+        <version>1.0</version>
+        <interface>
+            <name>IMiCharge</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.xiaomi.hardware.mlipay</name>
-        <version>1.1</version>
+        <version>1.0-1</version>
         <interface>
             <name>IMlipayService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.mtdservice</name>
+        <version>1.0-3</version>
+        <interface>
+            <name>IMTService</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -62,8 +109,15 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.tidaservice</name>
+        <version>1.0-2</version>
+        <interface>
+            <name>ITidaService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.xiaomi.sensor.citsensorservice</name>
-        <transport>hwbinder</transport>
         <version>1.1</version>
         <version>2.0</version>
         <interface>
