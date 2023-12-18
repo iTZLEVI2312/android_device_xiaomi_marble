@@ -408,6 +408,31 @@ PRODUCT_PACKAGES += \
     SettingsProviderResMarble \
     WifiResMarble
 
+PRODUCT_PACKAGES += \
+    AospWifiResOverlayMarble \
+    ApertureOverlayMarble \
+    CarrierConfigResMarble \
+    FrameworksResCommon \
+    FrameworksResOverlayMarble \
+    SettingsOverlayMarble \
+    SystemUIOverlayMarble \
+    TelecommResCommon \
+    TelephonyResCommon \
+    TetheringResCommon \
+    WifiResMarble \
+    WifiResTarget
+
+PRODUCT_PACKAGES += \
+    AospWifiResOverlayMarbleChina \
+    AospWifiResOverlayMarbleGlobal \
+    AospWifiResOverlayMarbleIndia \
+    SettingsOverlayGlobal \
+    SettingsOverlayIndia \
+    SettingsOverlayChina \
+    SettingsProviderOverlayGlobal \
+    SettingsProviderOverlayIndia \
+    SettingsProviderOverlayChina
+
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
