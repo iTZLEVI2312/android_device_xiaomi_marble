@@ -65,6 +65,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_ukee/audio_effects.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_ukee_qssi/audio_policy_configuration.xml
 
+# Characteristics
+PRODUCT_CHARACTERISTICS := nosdcard
+
 # Device Settings
 PRODUCT_PACKAGES += \
     XiaomiParts

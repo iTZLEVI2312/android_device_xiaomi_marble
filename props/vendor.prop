@@ -1,4 +1,6 @@
 # Audio
+ro.audio.spatializer_enabled=
+
 aaudio.mmap_policy=1
 aaudio.mmap_exclusive_policy=2
 aaudio.hw_burst_min_usec=2000
@@ -304,6 +306,8 @@ persist.vendor.qfp=true
 vendor.gatekeeper.disable_spu=true
 
 # Graphics
+debug.sf.disable_backpressure=1
+persist.sys.sf.native_mode=258
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.taro.api32
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
@@ -368,6 +372,9 @@ sys.haptic.tap.light=5,2
 sys.haptic.tap.normal=3,2
 sys.haptic.trigger.drawer=2,0
 
+# Incremental FS
+ro.incremental.enable=1
+
 # Media
 debug.c2.use_dmabufheaps=1
 debug.mdpcomp.logs=0
@@ -375,6 +382,8 @@ debug.stagefright.c2inputsurface=-1
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
 vendor.mm.enable.qcom_parser=16777215
+ro.mediaserver.64b.enable=true
+vendor.media.omx=0
 
 # Misc 
 sys.vendor.shutdown.waittime=500
@@ -416,9 +425,14 @@ persist.radio.multisim.config=dsds
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.dynamic_sar=1
+persist.vendor.radio.add_power_save=1
+persist.vendor.data.iwlan.enable=true
 persist.vendor.radio.enableadvancedscan=true
 persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.sib16_support=1
+
+# Sensor
+persist.vendor.sensors.enable.mag_filter=true
 
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE

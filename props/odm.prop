@@ -1,2 +1,18 @@
 # QTI
 ro.vendor.qti.va_odm.support=1
+
+# Audio
+aaudio.mmap_policy=1
+vendor.audio.offload.buffer.size.kb=256
+
+# Display/Graphics
+persist.sys.sf.color_mode=0
+ro.surface_flinger.set_idle_timer_ms=500
+ro.surface_flinger.set_touch_timer_ms=1000
+vendor.display.disable_3d_adaptive_tm=0
+vendor.display.enable_rounded_corner=0
+vendor.display.use_smooth_motion=0
+vendor.display.vds_allow_hwc=true
+
+# USB
+vendor.usb.use_gadget_hal=0
