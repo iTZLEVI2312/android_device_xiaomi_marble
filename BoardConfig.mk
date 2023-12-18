@@ -146,6 +146,12 @@ SOONG_CONFIG_ufsbsg_ufsframework := bsg
 # Security patch level
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
+# Sepolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
