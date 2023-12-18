@@ -173,5 +173,10 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/devic
 ODM_MANIFEST_SKUS += marble
 ODM_MANIFEST_MARBLE_FILES := $(DEVICE_PATH)/configs/vintf/manifest_nfc.xml
 
+# Vibrator
+SOONG_CONFIG_NAMESPACES += XIAOMI_VIBRATOR
+SOONG_CONFIG_XIAOMI_VIBRATOR := USE_EFFECT_STREAM
+SOONG_CONFIG_XIAOMI_VIBRATOR_USE_EFFECT_STREAM := true
+
 # Inherit the proprietary files
 include vendor/xiaomi/marble/BoardConfigVendor.mk
