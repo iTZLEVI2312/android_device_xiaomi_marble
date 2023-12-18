@@ -400,6 +400,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
+    LineageDialerMarble \
+    LineageSDKMarble \
+    LineageSettingsMarble
+
+PRODUCT_PACKAGES += \
     SettingsProviderResMarble \
     WifiResMarble
 
