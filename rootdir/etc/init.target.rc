@@ -65,8 +65,6 @@
 import /vendor/etc/init/hw/init.qti.kernel.rc
 import /vendor/etc/init/hw/init.mi_thermald.rc
 import /vendor/etc/init/hw/init.batterysecret.rc
-import /system/etc/init/init.factory.rc
-import /vendor/etc/init/init.charge_logger.rc
 
 on early-init
     write /proc/sys/kernel/printk_devkmsg ratelimited
@@ -204,11 +202,17 @@ on early-boot
     verity_update_state
 
 on boot
+    chmod 0664 /sys/class/thermal/thermal_message/sconfig
     chown system system /sys/class/thermal/thermal_message/sconfig
+    chmod 0664 /sys/class/thermal/thermal_message/charger_temp
     chown system system /sys/class/thermal/thermal_message/charger_temp
+    chmod 0664 /sys/class/thermal/thermal_message/board_sensor_temp_comp
     chown system system /sys/class/thermal/thermal_message/board_sensor_temp_comp
+    chmod 0664 /sys/class/thermal/thermal_message/cpu_nolimit_temp
     chown system system /sys/class/thermal/thermal_message/cpu_nolimit_temp
+    chmod 0664 /sys/class/thermal/thermal_message/balance_mode
     chown system system /sys/class/thermal/thermal_message/balance_mode
+    chmod 0664 /sys/class/thermal/thermal_message/flash_state
     chown cameraserver cameraserver /sys/class/thermal/thermal_message/flash_state
     chown system system /sys/module/perf_helper/mimd/mimdtrigger
     write /dev/cpuset/audio-app/cpus 0-7
@@ -391,9 +395,9 @@ on property:sys.shutdown.requested=*
 #on property:vold.decrypt=trigger_restart_framework
 #   start vendor.cnss_diag
 
-on property:ro.debuggable=1
-    start vendor.cnss_diag
-    start vendor.tcpdump
+#on property:ro.debuggable=1
+#    start vendor.cnss_diag
+#    start vendor.tcpdump
 
 on property:persist.vendor.cnss_diag.enable=true
     start vendor.cnss_diag
@@ -489,6 +493,7 @@ service vendor.sniffer.circular /vendor/bin/tcpdump -i wlan0 -W 3 -C 300 -w /dat
     oneshot
 
 on property:sys.boot_completed=1
+    write /sys/devices/virtual/thermal/thermal_message/sconfig 1
     enable vendor.qvirtmgr
     start  vendor.qvirtmgr
 

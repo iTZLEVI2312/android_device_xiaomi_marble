@@ -526,4 +526,3 @@ chmod 660 /config/stp-policy/coresight-stm:p_ost.policy
 mkdir /config/stp-policy/coresight-stm:p_ost.policy/default
 chmod 660 /config/stp-policy/coresight-stm:p_ost.policy/default
 echo 0x10 > /sys/bus/coresight/devices/coresight-stm/traceid
-

@@ -113,62 +113,19 @@ PRODUCT_COPY_FILES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    audio_jack_status.sh \
-    headset_detect.sh \
-    init.class_main.sh \
-    init.crda.sh \
-    init.kernel.post_boot-cape.sh \
-    init.kernel.post_boot-diwali.sh \
-    init.kernel.post_boot-taro.sh \
-    init.kernel.post_boot.sh \
-    init.mdm.sh \
-    init.qcom.class_core.sh \
-    init.qcom.coex.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.efs.sync.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sdio.sh \
-    init.qcom.sensors.sh \
-    init.qcom.sh \
-    init.qcom.usb.sh \
-    init.qti.display_boot.sh \
-    init.qti.kernel.debug-cape.sh \
-    init.qti.kernel.debug-diwali.sh \
-    init.qti.kernel.debug-taro.sh \
-    init.qti.kernel.debug.sh \
-    init.qti.kernel.early_debug-taro.sh \
-    init.qti.kernel.early_debug.sh \
-    init.qti.kernel.sh \
-    init.qti.media.sh \
-    init.qti.qcv.sh \
-    init.qti.touch_boot.sh \
-    init.qti.write.sh \
-    playback_headset.sh \
-    qca6234-service.sh \
-    setup_rcv2backmic.sh \
-    setup_rcv2mainmic.sh \
-    setup_rcv2topmic.sh \
-    spk_dsm_test.sh \
-    us_cal.sh \
-    vendor_modprobe.sh \
-
-PRODUCT_PACKAGES += \
+    charger_fw_fstab.qti \
     fstab.qcom \
-    init.batterysecret.rc \
-    init.mi_thermald.rc \
-    init.qcom.factory.rc \
+    init.class_main.sh \
+    init.marble.rc \
+    init.qcom.class_core.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
     init.qcom.rc \
-    init.qcom.usb.rc \
-    init.qti.kernel.rc \
-    init.qti.kernel.test.rc \
-    init.qti.ufs.rc \
-    init.target.rc \
-    init.recovery.hardware.rc \
+    init.qcom.sh \
     init.recovery.qcom.rc \
-    miui.factoryreset.rc \
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.qcom
+    init.target.rc \
+    ueventd.qcom.rc \
+    ueventd-odm.rc
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 33
